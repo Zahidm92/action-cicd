@@ -1,4 +1,4 @@
-name: Diploy Dist
+name: Deploy Dist
 on: [push,workflow_dispatch]
 jobs:
     test:
@@ -9,4 +9,3 @@ jobs:
                 echo "clonig repo..."
                 echo "${{toJson(github)}}"
                 git clone https://github.com/${{github.repository}}.git
-                
