@@ -5,10 +5,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Get code
-              run: git clone https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-              env:
-                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            - name: Get code
               run: |
                 echo "clonig repo...."
                 echo "${{toJson(github)}}"
