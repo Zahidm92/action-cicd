@@ -6,6 +6,6 @@ jobs:
         steps:
             - name: Get code
               run: |
-                echo "clonig repo..."
+                echo "clonig repo...."
                 echo "${{toJson(github)}}"
                 git clone https://github.com/${{github.repository}}.git
