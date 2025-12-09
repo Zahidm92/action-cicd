@@ -12,7 +12,7 @@ jobs:
                 node-version: 20
             - name: print node version
               run: node -v
-            - name: Restore Cache
+            - name: Cache dependices
               uses: actions/cache@v4
               with:
                 path: ~/.npm   
@@ -33,7 +33,7 @@ jobs:
                 node-version: 20
             - name: print node version
               run: node -v
-            - name: Restore Cache
+            - name: Cache dependices
               uses: actions/cache@v4
               with:
                 path: ~/.npm   
