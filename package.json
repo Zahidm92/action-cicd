@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Zahidm92.github.io/action-ciccd",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
