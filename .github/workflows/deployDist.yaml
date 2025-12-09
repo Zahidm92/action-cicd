@@ -1,5 +1,12 @@
 name: Deploy Dist
-on: [push,workflow_dispatch]
+on: 
+  push:
+    branches:
+      - main
+      - feature/**
+    path-ignore:
+      - '.github/workflows/*'
+      - README.md'
 jobs:
     test:
         runs-on: ubuntu-latest
@@ -10,11 +17,6 @@ jobs:
               uses: actions/setup-node@v6
               with:
                 node-version: 20
-            - name: Cache dependices
-              uses: actions/cache@v4
-              with:
-                path: ~/.npm   
-                keys: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
             - name: Install dependencies
               run: npm ci
             - name: Run test
@@ -29,11 +31,6 @@ jobs:
               uses: actions/setup-node@v6
               with:
                 node-version: 20
-            - name: Cache dependices
-              uses: actions/cache@v4
-              with:
-                path: ~/.npm   
-                keys: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
             - name: Install dependencies
               run: npm ci
             - name: Build Project
