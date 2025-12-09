@@ -53,8 +53,6 @@ jobs:
                 name: github-pages
                 url: ${{ steps.deployment.outputs.page_url }}
         steps:
-          - name: Remove symlinks before deployment
-            run: find ./public -type l -exec rm {} +
           - name: Deploy to GitHub Pages
             id: deployment
             uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
