@@ -10,8 +10,6 @@ jobs:
               uses: actions/setup-node@v6
               with:
                 node-version: 20
-            - name: print node version
-              run: node -v
             - name: Cache dependices
               uses: actions/cache@v4
               with:
@@ -31,8 +29,6 @@ jobs:
               uses: actions/setup-node@v6
               with:
                 node-version: 20
-            - name: print node version
-              run: node -v
             - name: Cache dependices
               uses: actions/cache@v4
               with:
